@@ -1,4 +1,4 @@
-# Modo: deep — Deep Research Prompt
+# Mode: deep -- Deep Research Prompt
 
 ## Language
 
@@ -7,61 +7,62 @@ user reads, not application content sent to the company. Override the shared
 "language of the JD (EN default)" rule for this mode and resolve the output
 language in this order:
 
-1. **User prompt language** — if the user wrote `/career-ops deep` (or its
-   surrounding chat) in Spanish, French, German, Japanese, etc., emit the
-   doc in that language.
-2. **`config/profile.yml`** — if `language.modes_dir` is set
-   (`modes/de`, `modes/fr`, `modes/ja`), prefer that locale.
-3. **JD language** — only as a last resort, when the user prompt has no
-   language signal (e.g., a bare URL with no surrounding chat).
+1. **User prompt language** -- if the user wrote `/career-ops deep` or the
+   surrounding chat in Spanish, French, German, Japanese, etc., emit the doc in
+   that language.
+2. **`config/profile.yml`** -- if `language.modes_dir` is set (`modes/de`,
+   `modes/fr`, `modes/ja`, etc.), prefer that locale.
+3. **JD language** -- only as a last resort, when the user prompt has no
+   language signal, such as a bare URL with no surrounding chat.
 
-The template below is written in Spanish as a scaffold. **Translate it to the
-resolved output language** before presenting; do not pass the Spanish through
-when the user is writing in another language.
+The template below is written in English as the default scaffold. Translate it
+to the resolved output language before presenting when the user or profile asks
+for another language.
 
-Genera un prompt estructurado para Perplexity/Claude/ChatGPT con 6 ejes:
+Generate a structured prompt for Perplexity/Claude/ChatGPT with 6 axes:
 
+```markdown
+## Deep Research: [Company] -- [Role]
+
+Context: I am evaluating an application for [role] at [company]. I need
+actionable information for interview preparation.
+
+### 1. AI Strategy
+- Which products or features use AI/ML?
+- What is their AI stack? Include models, infrastructure, and tools.
+- Do they have an engineering blog? What do they publish?
+- Have they published papers or given talks about AI?
+
+### 2. Recent Moves (last 6 months)
+- Relevant AI/ML/product hires?
+- Acquisitions or partnerships?
+- Product launches or pivots?
+- Funding rounds or leadership changes?
+
+### 3. Engineering Culture
+- How do they ship? Include deploy cadence and CI/CD.
+- Monorepo or multirepo?
+- Which languages and frameworks do they use?
+- Remote-first or office-first?
+- What do Glassdoor/Blind reviews say about engineering culture?
+
+### 4. Likely Challenges
+- What scaling problems do they have?
+- Reliability, cost, or latency challenges?
+- Are they migrating anything? Infrastructure, models, or platforms?
+- What pain points do people mention in reviews?
+
+### 5. Competitors and Differentiation
+- Who are their main competitors?
+- What is their moat or differentiator?
+- How do they position themselves against competitors?
+
+### 6. Candidate Angle
+Given my profile (read from cv.md and profile.yml for specific experience):
+- What unique value do I bring to this team?
+- Which of my projects are most relevant?
+- What story should I tell in the interview?
 ```
-## Deep Research: [Empresa] — [Rol]
 
-Contexto: Estoy evaluando una candidatura para [rol] en [empresa]. Necesito información accionable para la entrevista.
-
-### 1. Estrategia AI
-- ¿Qué productos/features usan AI/ML?
-- ¿Cuál es su stack de AI? (modelos, infra, tools)
-- ¿Tienen blog de engineering? ¿Qué publican?
-- ¿Qué papers o talks han dado sobre AI?
-
-### 2. Movimientos recientes (últimos 6 meses)
-- ¿Contrataciones relevantes en AI/ML/product?
-- ¿Acquisitions o partnerships?
-- ¿Product launches o pivots?
-- ¿Rondas de funding o cambios de liderazgo?
-
-### 3. Cultura de engineering
-- ¿Cómo shipean? (cadencia de deploy, CI/CD)
-- ¿Mono-repo o multi-repo?
-- ¿Qué lenguajes/frameworks usan?
-- ¿Remote-first o office-first?
-- ¿Glassdoor/Blind reviews sobre eng culture?
-
-### 4. Retos probables
-- ¿Qué problemas de scaling tienen?
-- ¿Reliability, cost, latency challenges?
-- ¿Están migrando algo? (infra, models, platforms)
-- ¿Qué pain points menciona la gente en reviews?
-
-### 5. Competidores y diferenciación
-- ¿Quiénes son sus main competitors?
-- ¿Cuál es su moat/diferenciador?
-- ¿Cómo se posicionan vs competencia?
-
-### 6. Ángulo del candidato
-Dado mi perfil (read from cv.md and profile.yml for specific experience):
-- ¿Qué valor único aporto a este equipo?
-- ¿Qué proyectos míos son más relevantes?
-- ¿Qué historia debería contar en la entrevista?
-```
-
-Personalizar cada sección con el contexto específico de la oferta evaluada,
-en el idioma resuelto en la sección **Language** de arriba (NO siempre español).
+Personalize every section with the specific context of the evaluated role, in
+the language resolved by the **Language** section above.

@@ -1,71 +1,65 @@
 # Career-Ops Profile Configuration
-# Copy this file to config/profile.yml and fill in your details.
-# This is the single source of truth for your personal data across all modes.
+# This is the single source of truth for personal data across all modes.
 
 candidate:
   full_name: "Saheel Sarker"
   email: "saheel.sarker@gmail.com"
-  phone: "+1-555-0123"
+  phone: "780-880-8416"
   location: "Edmonton, AB"
-  portfolio_url: "saheel-sarker.vercel.app"
+  portfolio_url: ""
   github: "github.com/Saheel-Sarker"
 
 target_roles:
-  # Your North Star roles — what you're optimizing for
   primary:
-    - "Intermediate Software Developer"
-    - "Junior Software Developer"
-    
-  # Archetypes help the evaluation system score fit
+    - "Full Stack Software Developer"
+    - "Software Developer"
+    - "Frontend Developer"
+
   archetypes:
-    - name: "Full-Stack Software Engineer"
+    - name: "Full-Stack Software Developer"
       level: "Junior/Intermediate"
-      fit: "primary"        # primary = dream role, secondary = good fit, adjacent = stretch
-    - name: "Frontend Developer"
+      fit: "primary"
+    - name: "Frontend / Mobile Developer"
       level: "Junior/Intermediate"
       fit: "secondary"
-    - name: "Data Analyst"
-      level: "Junior"
+    - name: "Backend / API Developer"
+      level: "Junior/Intermediate"
+      fit: "secondary"
+    - name: "Cloud / DevOps-leaning Developer"
+      level: "Junior/Intermediate"
       fit: "adjacent"
 
 narrative:
-  # Your professional headline (1 line)
-  headline: "Full-stack developer who adapts quickly and consistently delivers quality work under tight deadlines"
-  # Your exit story — what makes you unique
-  exit_story: "Built and sold my SaaS after 1 year. Now focused on building other cool and unique solutions."
-  # Your top 3-5 superpowers
+  headline: "Full-stack software developer with React Native, TypeScript, Laravel, Node.js, cloud, and SaaS launch experience"
+  exit_story: "Co-founded and launched Zeni Pass, a secure data management SaaS that grew to 534 active users, and now builds production software across web, mobile, backend, and cloud."
   superpowers:
-    - "End-to-end frontend and backend development"
-    - "Fast prototyping (idea to prod in 2 weeks)"
-    - "Cross-functional communication"
-  # Proof points — projects, articles, case studies with measurable impact
+    - "End-to-end full-stack delivery across React/Next/Vue, React Native, Laravel/PHP, Node.js, and databases"
+    - "Turning designs and requirements into production features quickly"
+    - "Debugging and stabilizing backend, deployment, Docker/ECR, and AWS workflows"
+    - "Coordinating with cross-functional teams and clients to ship on schedule"
+    - "Building secure SaaS features including auth, encryption, payments, and email"
   proof_points:
     - name: "Aeternum Project"
       url: "https://aeternumproject.com/"
-      hero_metric: "Reduced lag by 40% regarding website performance for 1K+ users"
-
-  # Optional: dashboard/demo URL with credentials
-  # dashboard:
-  #   url: "https://janesmith.dev/demo"
-  #   password: "demo-2026"
+      hero_metric: "Shipped React Native/Expo features, stabilized Laravel/PHP, PostgreSQL, AWS, Docker/ECR, and Python deployment workflows, and stepped into senior-level delivery responsibilities after the lead developer's departure"
+    - name: "Zeni Pass"
+      url: ""
+      hero_metric: "Co-founded and launched a secure MERN/Next.js SaaS with AES field-level encryption, JWT/Bcrypt auth, Stripe payments, Mailtrap email, and 534 active users"
+    - name: "Upwork client delivery"
+      url: ""
+      hero_metric: "Delivered React and Vue client websites, integrated Firebase services, improved performance through lazy loading/code splitting, and managed weekly client milestones"
 
 compensation:
-  target_range: "$40k-$60k"     # Your target total comp
+  target_range: "$40k-$60k"
   currency: "CAD"
-  minimum: "$35k"               # Walk-away number
-  location_flexibility: "Open to remote roles in Alberta, Canada, willing to relocate for the right opportunity"
+  minimum: "$35k"
+  location_flexibility: "Open to remote or hybrid roles in Alberta/Canada; willing to relocate for the right software development opportunity"
 
 location:
   country: "Canada"
   city: "Edmonton"
   timezone: "MST"
   visa_status: "No sponsorship needed. I'm a Canadian citizen."
-  # For remote roles outside your country:
-  # onsite_availability: "1 week/month in any city"
 
 cv:
-  output_format: "html" # "html" (default) or "latex"
-  # (Optional) Canva resume design ID for visual CV generation via /career-ops pdf.
-  # Find it in your Canva design URL: https://www.canva.com/design/DAxxxxxxx/...
-  # The ID starts with "D" and is 11 characters long.
-  # canva_resume_design_id: "DAxxxxxxxxx"
+  output_format: "html"

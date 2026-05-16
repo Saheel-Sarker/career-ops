@@ -88,8 +88,8 @@ Generate a 3-4 sentence email:
 
 ### LinkedIn Follow-up (if no email contact found)
 
-Reuse the contacto framework: 3 sentences, 300 character max.
-- Hook specific to company → proof point → soft ask
+Reuse the LinkedIn outreach (`contacto`) framework: 3 sentences, 300 character max.
+- Hook specific to company -> proof point -> soft ask
 - Suggest the user run `/career-ops contacto {company}` to find the right person first
 
 ### Second Follow-up (followupCount == 1)
