@@ -1,0 +1,71 @@
+# Career-Ops Profile Configuration
+# Copy this file to config/profile.yml and fill in your details.
+# This is the single source of truth for your personal data across all modes.
+
+candidate:
+  full_name: "Saheel Sarker"
+  email: "saheel.sarker@gmail.com"
+  phone: "+1-555-0123"
+  location: "Edmonton, AB"
+  portfolio_url: "saheel-sarker.vercel.app"
+  github: "github.com/Saheel-Sarker"
+
+target_roles:
+  # Your North Star roles — what you're optimizing for
+  primary:
+    - "Intermediate Software Developer"
+    - "Junior Software Developer"
+    
+  # Archetypes help the evaluation system score fit
+  archetypes:
+    - name: "Full-Stack Software Engineer"
+      level: "Junior/Intermediate"
+      fit: "primary"        # primary = dream role, secondary = good fit, adjacent = stretch
+    - name: "Frontend Developer"
+      level: "Junior/Intermediate"
+      fit: "secondary"
+    - name: "Data Analyst"
+      level: "Junior"
+      fit: "adjacent"
+
+narrative:
+  # Your professional headline (1 line)
+  headline: "Full-stack developer who adapts quickly and consistently delivers quality work under tight deadlines"
+  # Your exit story — what makes you unique
+  exit_story: "Built and sold my SaaS after 1 year. Now focused on building other cool and unique solutions."
+  # Your top 3-5 superpowers
+  superpowers:
+    - "End-to-end frontend and backend development"
+    - "Fast prototyping (idea to prod in 2 weeks)"
+    - "Cross-functional communication"
+  # Proof points — projects, articles, case studies with measurable impact
+  proof_points:
+    - name: "Aeternum Project"
+      url: "https://aeternumproject.com/"
+      hero_metric: "Reduced lag by 40% regarding website performance for 1K+ users"
+
+  # Optional: dashboard/demo URL with credentials
+  # dashboard:
+  #   url: "https://janesmith.dev/demo"
+  #   password: "demo-2026"
+
+compensation:
+  target_range: "$40k-$60k"     # Your target total comp
+  currency: "CAD"
+  minimum: "$35k"               # Walk-away number
+  location_flexibility: "Open to remote roles in Alberta, Canada, willing to relocate for the right opportunity"
+
+location:
+  country: "Canada"
+  city: "Edmonton"
+  timezone: "MST"
+  visa_status: "No sponsorship needed. I'm a Canadian citizen."
+  # For remote roles outside your country:
+  # onsite_availability: "1 week/month in any city"
+
+cv:
+  output_format: "html" # "html" (default) or "latex"
+  # (Optional) Canva resume design ID for visual CV generation via /career-ops pdf.
+  # Find it in your Canva design URL: https://www.canva.com/design/DAxxxxxxx/...
+  # The ID starts with "D" and is 11 characters long.
+  # canva_resume_design_id: "DAxxxxxxxxx"
